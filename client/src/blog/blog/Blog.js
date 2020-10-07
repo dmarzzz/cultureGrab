@@ -8,7 +8,7 @@ import SpotifyPlayer from 'react-spotify-player';
 
 // size may also be a plain string using the presets 'large' or 'compact'
 const size = {
-  width: '190%',
+  width: '100%',
   height: 200,
 };
 const view = 'coverart'; // or 'list'
@@ -71,11 +71,11 @@ const featuredPosts1 = [
 export default function Blog() {
 
   return (
-    <div style={{ backgroundColor: "#FFFFEF", height: "100vh" }}>
+    <div style={{ backgroundColor: "#FFFFEF", height: "auto" }}>
 
       <Container maxWidth="lg" >
         <Header title="Music" sections={sections} />
-        <main>
+        {/* <main> */}
           <MainFeaturedPost post={mainFeaturedPost} onClick={() => { console.log('test') }} />
           <br />
           <br />
@@ -84,7 +84,7 @@ export default function Blog() {
               <FeaturedPost key={post.title} post={post} onClick={() => { console.log('test') }} />
             ))}
           </Grid>
-        </main>
+        {/* </main> */}
         <br />
         <br />
         <br />
@@ -93,7 +93,7 @@ export default function Blog() {
             <FeaturedPost key={post.title} post={post} onClick={() => { console.log('test') }} />
           ))}
 
-          <div style={{ paddingLeft: '45px', paddingTop: '35px' }}>
+          <div style={{ paddingLeft: '45px', paddingTop: '35px', marginRight: '0' }}>
             <SpotifyPlayer
               uri="spotify:playlist:6g1kaPgmyPpAXCCItCpxjS"
               size={size}

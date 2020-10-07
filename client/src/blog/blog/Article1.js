@@ -1,40 +1,38 @@
 import React from 'react'
 import Header from './Header';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
+// import Typography from '@material-ui/core/Typography';
+// import Avatar from '@material-ui/core/Avatar';
+import post1 from './blog-post.1.md';
+import Main from './Main';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 //to use later
 const sections = [
     // { title: 'Technology', url: '#' },
 ];
 
+const useStyles = makeStyles((theme) => ({
+    mainGrid: {
+      marginTop: theme.spacing(3),
+    },
+}));
+
 export default function Article() {
+    const classes = useStyles();
 
     return (
         <div style={{ backgroundColor: "#FFFFEF", height: "100%" }}>
             <Container maxWidth="lg" >
                 <Header title="Music" sections={sections} href="/blog" />
-                <Typography
-                    component="h1"
-                    variant="h3"
-                    color="inherit"
-                    gutterBottom
-                >
-                    {postTitle}
-                </Typography>
-                <Avatar alt="Anthony Miller" src="/nonya" />
-                <Typography variant="h5" >By Anthony Miller</Typography>
-                <br />
-                {/* <div style={{ width:'70%', paddingLeft:'20%' }}> */}
-                <div>
-                    <Typography align="left" style={{ whiteSpace: 'pre-line' }} variant="h6" >
-                        {articleContents}
-                    </Typography>
-                </div>
+                <Grid container spacing={5} className={classes.mainGrid}>
+                    <Main title={postTitle} posts={posts} />
+                </Grid>
             </Container>
         </div>
     )
 }
+
 
 const postTitle = 'Suspiria Review'
 
@@ -44,3 +42,6 @@ In addition to the development of the narrative premise, 2018’s Suspiria adds 
 Lovers of Guadagnino’s Call Me By Your Name should prepare for a sharp departure from the immersive long takes that characteristically guide his linear, character-focused narratives. Instead, Suspiria pulsates with jarringly juxtaposed imagery tied together into a plotline crossing multiple spatial and temporal planes. Despite differences in visual expression, there still remain substantive conceptual connections between last year’s romantic daydream and this year’s psychedelic nightmare. Both films exalt the human form; Call Me By Your Name sanctifies its beauty in carefully constructed snap shots while Suspiria sacrifices it in hectic yet spellbinding dance sequences. Another creative continuity is found in the physical unity emphasized between the dancers at Tanz Dance Academy. Their circumstantial relation is subtly concretized by glances, hugs and kisses, reminding a Guadagnino fan of the muted interactions that build Elio and Oliver’s spiritual proximity.
 Ultimately, Guadagnino’s Suspiria exists as a portal to an otherworldly experience. Thom Yorke anchors the chaos onscreen with an ethereal soundtrack that never overwhelms the viewer, but offers the film a distinct sonic heartbeat. Each character portrayal is convincing, though none are particularly outstanding. Much like its predecessor, the film operates primarily as an aesthetic masterpiece. Those expecting a satisfying thematic resolution may be disappointed by the culminating sequences, but a cryptic conclusion seems appropriate for such anxiety-inducing cinema. 
 `
+
+const posts = [articleContents];
+    

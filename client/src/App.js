@@ -5,9 +5,12 @@ import {
   Route
 } from "react-router-dom";
 import HomePage from "./HomePage";
+import HomePage1 from "./HomePage1";
 // whoops/whoops/
 import Blog from "./blog/blog/Blog.js";
+import Blog1 from "./blog/blog/Blog1.js";
 import Article from "./blog/blog/Article";
+import Article1 from "./blog/blog/Article1";
 
 export default function App() {
   return (
@@ -22,14 +25,21 @@ export default function App() {
           <Route path="/blog">
             <Blog />
           </Route>
+          <Route path="/blog1">
+            <Blog1 />
+          </Route>
           <Route path="/music/Suspiria">
             <Article />
+          </Route>
+          <Route path="/music/Suspiria1">
+            <Article1 />
+          </Route>
+          <Route path="/1">
+            <HomePage1 />
           </Route>
           <Route path="/">
             <HomePage />
           </Route>
-
-
         </Switch>
       </div>
     </Router>

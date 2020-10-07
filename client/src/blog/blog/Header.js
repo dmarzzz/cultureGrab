@@ -47,7 +47,7 @@ export default function Header(props) {
           Sign up
         </Button> */}
       </Toolbar>
-      <Toolbar
+      {/* <Toolbar
         component="nav"
         variant="dense"
         className={classes.toolbarSecondary}
@@ -64,7 +64,7 @@ export default function Header(props) {
             {section.title}
           </Link>
         ))}
-      </Toolbar>
+      </Toolbar> */}
     </React.Fragment>
   );
 }

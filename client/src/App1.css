@@ -1,0 +1,121 @@
+  .Homepage-girl {
+    position: absolute;
+    bottom: 1%;
+    left: 60%;
+    height: 40vmin;
+    z-index: 2;
+  }
+  
+  .balloon {
+    height: 30vmin;
+    z-index: 1;
+  }
+
+  .Homepage-music-balloon {
+    position: absolute;
+    left: 41%;
+    top: 30%;
+  }
+  .Homepage-art-balloon {
+    position: absolute;
+    left: 47%;
+    top: 10%;
+  }
+  .Homepage-film-balloon {
+    position: absolute;
+    left: 27%;
+    top: 15%;
+  }
+
+  @media (max-width: 1100px) {
+    .Homepage-music-balloon {
+        left: 48%;
+      }
+      .Homepage-art-balloon {
+        left: 56%;
+      }
+      .Homepage-film-balloon {
+        left: 28%;
+      }
+      .Homepage-girl {
+        bottom: 1%;
+        left: 75%;
+      }
+  }
+
+  @media (max-width: 800px) {
+    .Homepage-music-balloon {
+        left: 43%;
+      }
+      .Homepage-art-balloon {
+        left: 48%;
+      }
+      .Homepage-film-balloon {
+        left: 17%;
+      }
+      .Homepage-girl {
+        bottom: 1%;
+        left: 75%;
+      }
+  }
+
+  @media (max-width: 500px) {
+    .balloon {
+        height: 22vmax;
+    }
+    .Homepage-music-balloon {
+        left: 33%;
+      }
+      .Homepage-art-balloon {
+        left: 37%;
+      }
+      .Homepage-film-balloon {
+        left: 2%;
+        top: 20%;
+      }
+      .Homepage-girl {
+        left: auto;
+        right: 3%;
+        height: 40vmax;
+        z-index: 2;
+      }
+      .Culture-Text {
+        bottom: 20%;
+        height: 15vmin;
+      }
+      .Grab-Text {
+        bottom: 2.5%;
+        height: 15vmin;
+      }
+  }
+  
+  .Culture-Text {
+    position: absolute;
+    left: 2%;
+    bottom: 20%;
+    height: 15vmin;
+    z-index: 3;
+  }
+  .Grab-Text {
+    position: absolute;
+    left: 2%;
+    bottom: 2.5%;
+    height: 15vmin;
+    z-index: 3;
+  }
+  .Music-Text {
+    height: 2.5vmin;
+    z-index: 3;
+  }
+  
+  
+.homepage-container {
+    background-color: #FFFFEF;
+    height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+  
+  .App-link {
+    color: #61dafb;
+  }
